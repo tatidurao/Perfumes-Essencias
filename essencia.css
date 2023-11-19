@@ -3,7 +3,7 @@
     justify-content: space-between;
     background-color: black;
     padding: 15px;
-    font-size: 20px;
+    font-size: 30px;
     font-family: fantasy;
     font-weight: 400;
     color: white;
@@ -34,7 +34,7 @@ a:visited{
 }
 .bodyimg p{
     color:#f7f2f2;
-    font-size: 40px;
+    font-size: 30px;
     font-family: fantasy;
     position: absolute;
     top:14%;
@@ -71,11 +71,11 @@ a:visited{
 .origami {
     
     border-radius: 20px;
-    background-color: gray;
+    /*background-color: gray;*/
     padding: 25px;
     margin: 25px;
     width:25%;
-    height: 600px;
+    height: 50%;
     font-family: fantasy;
     
 }

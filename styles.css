@@ -1,26 +1,61 @@
+*{
+    /*zerar as margins e preenchimentos auomaticos que o navegador coloca*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*tamanho da caixa seja medido pelo tamanho da borda
+     pegando o valor e mantendo a largura definida */
+}
+:root {
+    --text-color: white;
+    --bg-url: url(./Lightmode.jpg);
+    --surface-color: rgba(0, 0, 0, 0.1);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+}
+body{
+    background: var(--bg-url)
+    no-repeat top center /cover;
+    height: auto;
+    
+}
+body *{
+    font-family: 'Inter', sans-serif;
+    
+}
+#container{
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 0px auto; /*direção relogio top right bottom left*/
+    padding: 0 24px;
+}
+#header{
+    text-align: center;
+    padding: 24px;
+    
+}
+
 .menu{
+    text-align: center;
+    padding: 24px;
     display: flex;
     justify-content: space-between;
     background-color: black;
-    padding: 15px;
+    border-radius: 10px;
     font-size: 20px;
     font-family: sans-serif;
     font-weight: 400;
-    color: white;
-    width:100%;
-    
-    
+    color: black;    
 }
+
+
 .menu2{
     border: 2px solid white;
     border-radius: 10px;
+    border-color: black;
+    background-color: rgb(249, 185, 223);
     padding: 2px;
+   
 }
-body{
-    margin: 0px;
-    background-color:#f7f2f2;
-    
-}
+
 a{
     text-decoration: none;
 }
@@ -32,22 +67,19 @@ a:visited{
 }
 .bodyimg{
     border-radius: 10px;
-    background-color: pink;
+    background-color: rgb(249, 185, 223);;
     padding: 30px;
-    margin: 25px;
-    width:90%;
-    height:10px;
+    margin: 10px auto auto auto;
+   
     font-family: fantasy;
     
 }
 .bodyimg p{
-    color:#f7f2f2;
+    color:white;
     font-size: 30px;
-    font-family: fantasy;
+    font-family: sans-serif;
     position: absolute;
-    top:15%;
     left:50%;
-    align-items: center;
     transform: translate(-50%,-50%);
 }
 .bodyimg h3{
@@ -61,29 +93,41 @@ a:visited{
     transform: translate(-40%, -40%);
 }
 .grid{
+  
+    margin: 10px;
+    font-family: sans-serif;  
+    
+}
+
+
+ul{
+    list-style: none; /*sem pontos na lista*/
     display: flex;
     flex-wrap: wrap;
-    margin: 10px;
-    font-family: sans-serif;
+    /*flex-direction: row; /*deixa os item em colunas ao inves de um ao lado do outro com o row*/
+    gap: 12px; /*espaço entre os elementos da caixa*/
+    padding: 24px 0; /*24 superior e inferior e 0 nas laterais*/
+    
+}
+ ul li a{
+    /*largura do li esta definida pela largura do div*/
+    border: 1px solid var(--stroke-color);
+    display: flex;
     justify-content: center;
-    
-}
-.grid img{
-    border: 2px solid black;
-    border-radius: 20px;
-}
-.origami {
-    
-    border-radius: 20px;
-    /*background-color: gray;*/
-    padding: 1px;
-    margin: 5px;
-    width:30%;
-    font-family: fantasy;
-    
-    
-}
-.origami:hover{
+    align-items: center;
+    padding: 16px 26px;
+    background: var(--surface-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 
-    transform: scale(1.1);
-}
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.2s;
+ }
+
+ ul li a:hover{
+    background: var(--surface-color-hover);
+    border: 1px solid var(--text-color);
+ }
